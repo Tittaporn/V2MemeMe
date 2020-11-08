@@ -16,10 +16,12 @@ class MemeCustomTableViewCell: UITableViewCell {
         // Initialization code
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
+    func updateCell(_ meme: Meme) {
 
-        // Configure the view for the selected state
+        //update cell's view
+        memeImageView.image = meme.memedImage
+        topLabel.text = meme.topText as String?
+        bottomLabel.text = meme.bottomText as String?
     }
 
 }

@@ -23,6 +23,17 @@ struct Meme {
         self.originalImage = originalImage
         self.memedImage = memedImage
     }
+
+    //Get a count of all Memes
+    static func count() -> Int {
+        return getMemeStorage().memes.count
+    }
+
+    //Locate the Meme storage location
+    static func getMemeStorage() -> AppDelegate {
+        return UIApplication.shared.delegate as! AppDelegate
+    }
+
 }
 
 
